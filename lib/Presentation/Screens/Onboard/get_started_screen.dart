@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_irctc_clone_app/AppUtils/app_utils.dart';
+import 'package:flutter_irctc_clone_app/Presentation/Screens/Auth/login.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Screens/Auth/verify_otp_screen.dart';
 
 class GetStartedScreen extends StatefulWidget {
@@ -84,7 +85,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => VerifyOTPScreen(),
+                            builder: (context) =>LoginScreen(),
                           ));
                     },
                     child: Container(

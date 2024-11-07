@@ -2,13 +2,13 @@
 
 import 'dart:ui';
 
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_irctc_clone_app/AppUtils/app_utils.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Screens/Home/home_page_screen.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Screens/SelectTrain/select_train.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Widgets/train_search_filter.dart';
 import 'package:marquee/marquee.dart';
-import 'package:dotted_line/dotted_line.dart';
 
 class SearchTrainScreen extends StatefulWidget {
   const SearchTrainScreen({super.key});

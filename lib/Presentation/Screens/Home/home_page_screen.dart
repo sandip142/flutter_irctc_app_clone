@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_irctc_clone_app/AppUtils/app_utils.dart';
+import 'package:flutter_irctc_clone_app/Presentation/Screens/Working/Station_train.dart';
+import 'package:flutter_irctc_clone_app/Presentation/Screens/Working/live_annoucement.dart';
+import 'package:flutter_irctc_clone_app/Presentation/Screens/train_list_screen.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Widgets/bottom_navigatoin_bar.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Widgets/other_service_card.dart';
 import 'package:flutter_irctc_clone_app/Presentation/Widgets/search_train%20copy.dart';
@@ -25,7 +28,7 @@ class _HomeScreenState extends State<HomePageScreen> {
       body: Stack(
         children: [
           Container(
-            color: Color(0xFF010101),
+            color: const Color(0xFF010101),
             child: Image.asset("assets/image/home_bg.png",
                 fit: BoxFit.cover, width: double.maxFinite),
           ),
@@ -43,7 +46,7 @@ class _HomeScreenState extends State<HomePageScreen> {
                     child: Text(
                       "Train services",
                       style: TextStyle(
-                        color: Color(0xFFA5A5A5),
+                        color: const Color(0xFFA5A5A5),
                         fontWeight: FontWeight.w500,
                         fontSize: setHeight(21),
                         letterSpacing: 0,
@@ -61,9 +64,9 @@ class _HomeScreenState extends State<HomePageScreen> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SearchTrainScreen()));
+                                  builder: (context) => TrainStationScreen()));
                         },
-                        child: TrainServiceCardWidget(
+                        child: const TrainServiceCardWidget(
                           imgPath: "assets/image/train.png",
                           imgColor: Color(0xFF3C87F6),
                           title: "Train",
@@ -71,13 +74,21 @@ class _HomeScreenState extends State<HomePageScreen> {
                           cardColor: Color(0xFF2475EE),
                         ),
                       ),
-                      SizedBox(width: setWidth(14)),
-                      TrainServiceCardWidget(
-                        imgPath: "assets/image/food.png",
-                        imgColor: Color(0xFF292A2F),
-                        title: "Food",
-                        description: "Food delivery at your seat",
-                        cardColor: Color(0xFF1D1F24),
+                          SizedBox(width: setWidth(14)),
+                      InkWell(
+                        onTap: (){
+                           Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>  TrainListPage()));
+                        },
+                        child: const TrainServiceCardWidget(
+                          imgPath: "assets/image/food.png",
+                          imgColor: Color(0xFF292A2F),
+                          title: "Station",
+                          description: "see all Stations",
+                          cardColor: Color(0xFF1D1F24),
+                        ),
                       ),
                     ],
                   ),
@@ -85,19 +96,27 @@ class _HomeScreenState extends State<HomePageScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TrainServiceCardWidget(
-                        imgPath: "assets/image/ask_disha.png",
-                        imgColor: Color(0xFF292A2F),
-                        title: "Ask Disha",
-                        description: "Virtual assistant",
-                        cardColor: Color(0xFF1D1F24),
+                      InkWell(
+                        onTap: (){
+                           Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LiveAnnouncementScreen()));
+                        },
+                        child: const TrainServiceCardWidget(
+                          imgPath: "assets/image/ask_disha.png",
+                          imgColor: Color(0xFF292A2F),
+                          title: "Live Annouced",
+                          description: "Virtual assistant",
+                          cardColor: Color(0xFF1D1F24),
+                        ),
                       ),
                       SizedBox(width: setWidth(14)),
-                      TrainServiceCardWidget(
+                      const TrainServiceCardWidget(
                         imgPath: "assets/image/rooms.png",
                         imgColor: Color(0xFF292A2F),
-                        title: "Rooms",
-                        description: "Book rooms at stations",
+                        title: "Annoucement",
+                        description: "",
                         cardColor: Color(0xFF1D1F24),
                       ),
                     ],
@@ -110,7 +129,7 @@ class _HomeScreenState extends State<HomePageScreen> {
                     child: Text(
                       "Other services",
                       style: TextStyle(
-                        color: Color(0xFFA5A5A5),
+                        color: const Color(0xFFA5A5A5),
                         fontWeight: FontWeight.w500,
                         fontSize: setHeight(21),
                         letterSpacing: 0,
@@ -121,11 +140,11 @@ class _HomeScreenState extends State<HomePageScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      OtherServiceCardWidget(
+                      const OtherServiceCardWidget(
                           title: "Flight",
                           description: "Book your next flight"),
                       SizedBox(width: setWidth(14)),
-                      OtherServiceCardWidget(
+                      const OtherServiceCardWidget(
                           title: "Hotel", description: "Book your next stay"),
                     ],
                   ),
@@ -133,10 +152,10 @@ class _HomeScreenState extends State<HomePageScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      OtherServiceCardWidget(
+                      const OtherServiceCardWidget(
                           title: "Bus", description: "Book your next bus"),
                       SizedBox(width: setWidth(14)),
-                      OtherServiceCardWidget(
+                      const OtherServiceCardWidget(
                           title: "Tourism",
                           description: "Explore tour options"),
                     ],
@@ -148,7 +167,7 @@ class _HomeScreenState extends State<HomePageScreen> {
         ],
       ),
 
-      bottomNavigationBar: BottomNavigationBarWidget(),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
 }

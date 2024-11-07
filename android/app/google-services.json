@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "321597286428",
+    "project_id": "authfire-8aa70",
+    "storage_bucket": "authfire-8aa70.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321597286428:android:1ca0bfd0531fd38b0cd7d9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_irctc_clone_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0XrPe8EZH1IHnb4dd8yjlcP51UHO_s78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
